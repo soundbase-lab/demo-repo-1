@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "shure-test-plugin",
   "name": "SoundBase Plugin Template",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "license": "BUSL-1.1",
   "platforms": [
     "darwin-arm64",
