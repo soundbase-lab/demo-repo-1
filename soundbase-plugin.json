@@ -1,12 +1,21 @@
 {
   "manifestVersion": 1,
-  "id": "template",
+  "id": "shure-test-plugin",
   "name": "SoundBase Plugin Template",
   "version": "0.1.12",
   "license": "BUSL-1.1",
-  "platforms": ["darwin-arm64", "darwin-x64", "win32-x64"],
+  "platforms": [
+    "darwin-arm64",
+    "darwin-x64",
+    "win32-x64"
+  ],
   "repository": "https://github.com/your-org/soundbase-plugin-template",
-  "maintainers": [{ "name": "Your Name", "email": "you@example.com" }],
+  "maintainers": [
+    {
+      "name": "Your Name",
+      "email": "you@example.com"
+    }
+  ],
   "contract": {
     "core": "1.4",
     "modules": {
@@ -15,12 +24,20 @@
       "PropertyControl": "1.0"
     }
   },
-  "runtime": { "type": "node", "entrypoint": "main.js" },
-  "deployment": ["managed"],
-  "template": { "name": "soundbase-plugin-template", "version": "1.0.15" },
+  "runtime": {
+    "type": "node",
+    "entrypoint": "main.js"
+  },
+  "deployment": [
+    "managed"
+  ],
+  "template": {
+    "name": "soundbase-plugin-template",
+    "version": "1.0.15"
+  },
   "products": [
     {
-      "deviceTypeId": "plugin:template/synthetic",
+      "deviceTypeId": "plugin:shure-test-plugin/synthetic",
       "manufacturer": {
         "id": "soundbase",
         "name": "SoundBase",
@@ -34,12 +51,19 @@
         "name": "Synthetic",
         "displayName": "Synthetic Analyzer"
       },
-      "family": { "id": "template", "name": "Template" },
-      "capabilities": { "spectrumAnalyzer": true },
-      "traits": { "isSpectrumAnalyzer": true }
+      "family": {
+        "id": "shure-test-plugin",
+        "name": "Template"
+      },
+      "capabilities": {
+        "spectrumAnalyzer": true
+      },
+      "traits": {
+        "isSpectrumAnalyzer": true
+      }
     },
     {
-      "deviceTypeId": "plugin:template/synthetic-iem",
+      "deviceTypeId": "plugin:shure-test-plugin/synthetic-iem",
       "manufacturer": {
         "id": "soundbase",
         "name": "SoundBase",
@@ -53,7 +77,10 @@
         "name": "Synthetic IEM",
         "displayName": "Synthetic Stereo IEM"
       },
-      "family": { "id": "template", "name": "Template" },
+      "family": {
+        "id": "shure-test-plugin",
+        "name": "Template"
+      },
       "capabilities": {
         "meters": true,
         "frequency": true,
@@ -118,17 +145,37 @@
             "label": "RF",
             "tone": "success"
           },
-          { "type": "control", "propertyId": "txPower" }
+          {
+            "type": "control",
+            "propertyId": "txPower"
+          }
         ],
         "device": [
-          { "type": "text", "text": "Synthetic stereo IEM transmitter" }
+          {
+            "type": "text",
+            "text": "Synthetic stereo IEM transmitter"
+          }
         ],
         "entities": {
           "receiver": [
-            { "type": "value", "bind": "name" },
-            { "type": "battery", "bind": "battery" },
-            { "type": "meter", "bind": "meters.rf1", "metric": "RF_LEVEL" },
-            { "type": "meter", "bind": "meters.lqi", "metric": "QUALITY" }
+            {
+              "type": "value",
+              "bind": "name"
+            },
+            {
+              "type": "battery",
+              "bind": "battery"
+            },
+            {
+              "type": "meter",
+              "bind": "meters.rf1",
+              "metric": "RF_LEVEL"
+            },
+            {
+              "type": "meter",
+              "bind": "meters.lqi",
+              "metric": "QUALITY"
+            }
           ]
         }
       }
@@ -150,6 +197,10 @@
     "txPower",
     "rfState",
     "receivers",
-    { "key": "x.template.packLink", "scope": "channel", "op": "merge" }
+    {
+      "key": "x.shure-test-plugin.packLink",
+      "scope": "channel",
+      "op": "merge"
+    }
   ]
 }

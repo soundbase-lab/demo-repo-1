@@ -10,8 +10,8 @@ import { HttpError } from '@soundbase/plugin-shell';
 // the `deviceTypeId`s declared in soundbase-plugin.json — the shell warns and
 // the host ignores a device naming a product the manifest never declared.
 // `npm run rename` keeps them in step; a test asserts they agree.
-export const PRODUCT = 'plugin:template/synthetic';
-export const IEM_PRODUCT = 'plugin:template/synthetic-iem';
+export const PRODUCT = 'plugin:shure-test-plugin/synthetic';
+export const IEM_PRODUCT = 'plugin:shure-test-plugin/synthetic-iem';
 
 // ---------------------------------------------------------------------------
 // SpectrumAnalyzer: a synthetic spectrum
@@ -233,7 +233,7 @@ class SyntheticIemAdapter {
     });
     // an extension key: which pack each channel feeds, something SoundBase
     // has no core key for. Declared in the manifest's stateKeys.
-    this.onState?.('x.template.packLink', {
+    this.onState?.('x.shure-test-plugin.packLink', {
       channels: { 1: 'pack:1', 2: 'pack:2' },
     });
     this.meterTimer = setInterval(() => this.tickMeters(), METER_INTERVAL_MS);

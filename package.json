@@ -1,5 +1,5 @@
 {
-  "name": "soundbase-plugin-template",
+  "name": "soundbase-plugin-shure-test-plugin",
   "version": "0.1.12",
   "description": "Starting point for a SoundBase plugin: a synthetic spectrum analyzer served by the plugin shell.",
   "license": "BUSL-1.1",

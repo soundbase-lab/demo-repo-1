@@ -307,7 +307,7 @@ test('the synthetic IEM is discovered and owning it opens it', async (t) => {
       ['pack:2', 2],
     ]
   );
-  const link = stateFor(stream.records, 'x.template.packLink');
+  const link = stateFor(stream.records, 'x.shure-test-plugin.packLink');
   assert.deepEqual(link[0].value, { channels: { 1: 'pack:1', 2: 'pack:2' } });
 
   // meters move, and arrive at the coalesced rate rather than the raw one
